@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'olimpiada-5/**'
+      - 'quiz/**'
       - '.github/workflows/publish-olimpiada-pages.yml'
   workflow_dispatch:
 
