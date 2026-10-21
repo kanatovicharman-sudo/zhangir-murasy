@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173e34">
+  <meta name="description" content="Жәңгір ханның ағартушылық мұрасы: ғылыми зерттеу, тарихи макет, зерттеу күнделігі және 9 қосымша сабақтың жоспары.">
+  <title>Жәңгір ханның ағартушылық мұрасы</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Мазмұнға өту</a>
+  <div class="mobilebar"><a href="#home" class="mobilebrand">ЖӘҢГІР <span>мұрасы</span></a><button id="menuToggle" aria-label="Мәзірді ашу" aria-expanded="false">☰</button></div>
+  <div id="veil" class="veil" hidden></div>
+  <aside class="sidebar" id="sidebar" aria-label="Негізгі мәзір">
+    <a href="#home" class="brand"><span class="brandseal">Ж</span><span>ЖӘҢГІР<small>АҒАРТУШЫЛЫҚ МҰРАСЫ</small></span></a>
+    <div class="navlabel">ҒЫЛЫМИ ЖОБА</div>
+    <nav id="nav">
+      <a href="#home" data-page="home"><span class="navicon">⌂</span>Басты бет</a>
+      <a href="#research" data-page="research"><span class="navicon">▤</span>Зерттеу туралы</a>
+      <a href="#heritage" data-page="heritage"><span class="navicon">◷</span>Тарихи мұра</a>
+      <div class="navlabel">БІЗДІҢ ЖҰМЫСЫМЫЗ</div>
+      <a href="#model" data-page="model"><span class="navicon">◇</span>Тарихи макет<span class="navcount">4</span></a>
+      <a href="#practice" data-page="practice"><span class="navicon">♧</span>Сыныптан тыс жұмыс</a>
+      <a href="#journal" data-page="journal"><span class="navicon">▦</span>Зерттеу күнделігі</a>
+      <div class="navlabel">ТАНУ ЖӘНЕ ҮЙРЕНУ</div>
+      <a href="#plan" data-page="plan"><span class="navicon">▣</span>Қосымша сабақтар<span class="navcount">9</span></a>
+      <a href="#interactive" data-page="interactive"><span class="navicon">✧</span>Өзіңді тексер</a>
+      <a href="#sources" data-page="sources"><span class="navicon">≡</span>Дереккөздер</a>
+    </nav>
+    <div class="sidebarfoot"><span class="smallornament">◇ ─ ◇</span><p>Өткенді таны.<br>Мұраны жалғастыр.</p><small>Тарих · Ғылыми зерттеу · 2026</small></div>
+  </aside>
+  <div class="shell">
+    <header class="topbar"><div><span class="topdot"></span>ТАРИХИ-ТАНЫМДЫҚ ЖОБА <span class="crumb" id="crumb">/ Басты бет</span></div><a href="#model" class="toplink">Макетпен танысу <span>↗</span></a></header>
+    <main id="main" tabindex="-1"><div class="loading">Жоба жүктелуде…</div></main>
+    <footer class="footer"><span>Жәңгір ханның ағартушылық мұрасы</span><span>Ғылыми жоба · 2026 <span class="footdiamond">◇</span></span></footer>
+  </div>
+  <dialog id="galleryDialog" aria-labelledby="galleryTitle">
+    <div class="galleryhead"><div><small id="galleryCounter"></small><h2 id="galleryTitle"></h2></div><div class="gallerytools"><button id="zoomImage" aria-label="Суретті үлкейту">＋</button><a id="imageDownload" download aria-label="Суретті жүктеу">↓</a><button id="closeGallery" aria-label="Галереяны жабу">✕</button></div></div>
+    <div class="galleryviewport" id="galleryViewport"><img id="galleryImage" alt=""></div>
+    <div class="gallerybottom"><button id="previousImage">← Алдыңғы</button><span>Макеттің нақты фотосы · фоны өңделген</span><button id="nextImage">Келесі →</button></div>
+  </dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>
