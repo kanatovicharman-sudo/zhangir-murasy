@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#142c3c">
+  <meta name="description" content="7-сынып Қазақстан тарихы олимпиадасына дайындық. Төрт құжаттағы 120 сұрақ, түсіндірмелер, уақытпен сынақ және қателермен жұмыс.">
+  <title>Тарих алаңы | 7-сынып олимпиада куизі</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css?v=1">
+  <script src="./data.js?v=1" defer></script>
+  <script src="./quiz-core.js?v=1" defer></script>
+  <script src="./app.js?v=1" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Негізгі мазмұнға өту</a>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="Тарих алаңы - басты бет">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle cx="20" cy="20" r="8"/><path d="M20 3v9m0 16v9M3 20h9m16 0h9M8 8l6 6m12 12 6 6M8 32l6-6m12-12 6-6"/></svg>
+        <span>Тарих <b>алаңы</b><small>ОЛИМПИАДАҒА ДАЙЫНДЫҚ</small></span>
+      </a>
+      <nav aria-label="Негізгі мәзір">
+        <a href="#home" data-nav="home">Дайындық</a>
+        <a href="#bank" data-nav="bank">Сұрақтар банкі</a>
+        <a href="#progress" data-nav="progress">Менің нәтижем</a>
+      </nav>
+      <span class="grade-tag">7-сынып</span>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><div class="loading">Сұрақтар жүктелуде…</div></main>
+  <footer class="footer">
+    <span>Тарих алаңы <span class="dot">·</span> Қазақстан тарихы</span>
+    <span>Тіркелусіз қолжетімді <span class="dot">·</span> Нәтиже осы браузерде сақталады</span>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="confirm-dialog" aria-labelledby="dialog-title">
+    <h2 id="dialog-title"></h2><p id="dialog-text"></p>
+    <div class="button-row"><button class="button secondary" id="dialog-cancel">Жалғастыру</button><button class="button" id="dialog-confirm">Аяқтау</button></div>
+  </dialog>
+  <noscript><p class="no-script">Куизді орындау үшін браузерде JavaScript қосулы болуы керек.</p></noscript>
+</body>
+</html>
