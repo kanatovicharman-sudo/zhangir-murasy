@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173b3d">
+  <meta name="description" content="8-сынып Қазақстан тарихы олимпиадасына дайындық: 120 сұрақ, 4 жинақ, жауап түсіндірмелері және қателермен жұмыс. Тегін, тіркелусіз.">
+  <title>Тарих алаңы · 8-сынып олимпиадасы</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="core.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Мазмұнға өту</a>
+  <aside class="sidebar">
+    <a href="#home" class="brand" aria-label="Тарих алаңы - басты бет"><span class="brandmark" aria-hidden="true">Т</span><span>Тарих алаңы<small>БІЛІМНЕН · БИІККЕ</small></span></a>
+    <div class="side-caption">ЖЕКЕ ДАЙЫНДЫҚ</div>
+    <nav id="navigation" aria-label="Негізгі мәзір">
+      <a href="#home" data-nav="home"><span data-icon="home"></span>Басты бет</a>
+      <a href="#bank" data-nav="bank"><span data-icon="book"></span>Сұрақтар қоры<span class="nav-count">120</span></a>
+      <a href="#mistakes" data-nav="mistakes"><span data-icon="repeat"></span>Қателермен жұмыс<span id="wrong-count" class="nav-count">0</span></a>
+      <a href="#stats" data-nav="stats"><span data-icon="chart"></span>Менің нәтижелерім</a>
+    </nav>
+    <div class="side-progress"><div class="side-caption">СЕНІҢ ІЛГЕРІЛЕУІҢ</div><div class="progress-label"><span>Меңгерілгені</span><strong id="mastered-label">0 / 119</strong></div><div class="track"><span id="mastered-bar"></span></div><p>Күн сайын бір қадам алға.</p></div>
+    <div class="side-bottom"><a href="#sources" data-nav="sources"><span data-icon="info"></span>Материалдар туралы</a><div class="side-note"><span class="status-dot"></span>Тегін · Тіркелусіз · Қазақша</div></div>
+  </aside>
+  <div class="shell">
+    <header class="topbar"><div class="breadcrumb">ҚАЗАҚСТАН ТАРИХЫ<span>/</span><strong id="page-label">Олимпиадаға дайындық</strong></div><div class="top-actions"><span class="class-pill">8-сынып</span><button type="button" id="share-link" class="icon-button" aria-label="Сайт сілтемесін көшіру" title="Сілтемені көшіру"><span data-icon="share"></span></button></div></header>
+    <main id="content" tabindex="-1"><div class="loading">Сұрақтар жүктелуде…</div></main>
+    <footer class="footer"><span>Тарих алаңы · 8-сынып</span><a href="#sources">Материалдар туралы</a><a href="https://github.com/kanatovicharman-sudo/zhangir-murasy/tree/main/quiz/8-synyp-olimpiada" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></footer>
+  </div>
+  <dialog id="setup-dialog" aria-labelledby="setup-title"><form id="setup-form" class="modal-content"><div class="modal-top"><span class="eyebrow">ДАЙЫНДЫҚ ПАРАМЕТРЛЕРІ</span><button type="button" class="icon-button" data-close="setup-dialog" aria-label="Жабу">✕</button></div><h2 id="setup-title">Өзіңе ыңғайлысын таңда</h2><p id="setup-description" class="muted"></p><input type="hidden" id="setup-stage" value="all"><input type="hidden" id="setup-pool" value="all"><fieldset class="mode-field"><legend>Дайындық түрі</legend><label class="mode-choice"><input type="radio" name="mode" value="learn" checked><span><strong>Үйрену</strong><small>Әр жауаптан кейін түсіндірме</small></span><span data-icon="book"></span></label><label class="mode-choice"><input type="radio" name="mode" value="exam"><span><strong>Сынақ</strong><small>Уақытпен, жауаптар соңында</small></span><span data-icon="clock"></span></label></fieldset><label class="input-label" for="question-count">Сұрақ саны</label><select id="question-count"><option value="10">10 сұрақ</option><option value="20">20 сұрақ</option><option value="30">30 сұрақ</option><option value="all">Барлық сұрақ</option></select><label class="checkbox-label"><input type="checkbox" id="randomize" checked>Сұрақтарды араластыру</label><p id="setup-hint" class="small muted">Жауап нұсқалары әр бастағанда араласады.</p><p id="replace-attempt-note" class="notice small" hidden>Жаңа дайындықты бастасаң, аяқталмаған талпыныс ауыстырылады.</p><button class="button primary wide" type="submit">Дайындықты бастау <span aria-hidden="true">→</span></button></form></dialog>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title"><div class="modal-content"><div class="modal-top"><span class="eyebrow">ТАЛПЫНЫСТЫ АЯҚТАУ</span><button type="button" class="icon-button" data-close="confirm-dialog" aria-label="Жабу">✕</button></div><h2 id="confirm-title">Нәтижеге өтейік пе?</h2><p id="confirm-message" class="muted"></p><div class="button-row"><button type="button" class="button secondary" data-close="confirm-dialog">Жалғастыру</button><button type="button" id="confirm-finish" class="button primary">Аяқтау</button></div></div></dialog>
+  <dialog id="reset-dialog" aria-labelledby="reset-title"><div class="modal-content"><h2 id="reset-title">Нәтижелерді тазарту</h2><p class="muted">Осы браузердегі талпыныстар тарихы, белгілер және аяқталмаған дайындық өшіріледі.</p><div class="button-row"><button type="button" class="button secondary" data-close="reset-dialog">Бас тарту</button><button type="button" id="confirm-reset" class="button danger">Тазарту</button></div></div></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <noscript><p class="noscript">Куизді пайдалану үшін браузерде JavaScript қосулы болуы керек.</p></noscript>
+</body>
+</html>
